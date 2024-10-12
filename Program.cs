@@ -4,6 +4,13 @@
     using System.Collections.Generic;
     using System.Data.SQLite;
 
+ //El código implementa un sistema experto que utiliza
+ //encadenamiento hacia adelante para recomendar cultivos según condiciones ambientales.
+ //Carga hechos y reglas desde una base de datos SQLite, donde las reglas tienen condiciones (como tipo de suelo y clima) y conclusiones (cultivos recomendados).
+ //El algoritmo verifica si los hechos conocidos cumplen las condiciones de alguna regla, y si es así, añade la conclusión como un nuevo hecho.
+ //Este proceso se repite hasta que no se puedan derivar más hechos, y luego se muestran todos los hechos, incluidos los nuevos cultivos sugeridos.
+
+
     class SistemaExpertoCultivo
     {
         private List<string> hechos = new List<string>();
